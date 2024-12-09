@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testsuite" verbose="1">
+    <listeners>
+    <listener class-name="com.tricentis.demo.customlisteners.CustomListeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+
+    <groups>
+        <run>
+            <include name="sanity"/>
+        </run>
+    </groups>
+    <test name="Sanity test">
+        <classes>
+            <class name="com.tricentis.demo.testsuite.LoginPageTest"/>
+            <class name="com.tricentis.demo.testsuite.ComputerPageTest"/>
+            <class name="com.tricentis.demo.testsuite.RegisterPageTest"/>
+        </classes>
+
+
+    </test>
+</suite>
